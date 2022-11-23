@@ -31,12 +31,10 @@ const recipeSchema = new Schema({
     ],
     ingredients: [
         {
-            ingredient: {
-                type: mongoose.Schema.Types.ObjectId, 
-                ref: 'Ingredient'
-            },
+            name: { type: String, required: true},
+            description: {type: String, required: false},
             quantity: {type: Number, required: false},
-            quantityType: {type: String, required: false}
+            quantityType: {type: String, required: true}
         }
     ],
     description: [
